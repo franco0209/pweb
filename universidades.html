@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Universidades Licenciadas</title>
+    <link rel="stylesheet" href="/htdocs/style.css">
+</head>
+<body>
+    <h1>Consulta de Universidades Licenciadas</h1>
+    <form action="/cgi-bin/consulta.cgi" method="post">
+        <label for="campo">Selecciona un campo:</label>
+        <select id="campo" name="campo">
+            <option value="nombre">Nombre Universidad</option>
+            <option value="periodo">Periodo Licenciamiento</option>
+            <option value="departamento">Departamento Local</option>
+            <option value="denominacion">Denominación Programa</option>
+        </select>
+        <br>
+        <label for="valor">Ingresa el valor:</label>
+        <input type="text" id="valor" name="valor" required>
+        <br>
+        <input type="submit" value="Consultar">
+    </form>
+</body>
+</html>
