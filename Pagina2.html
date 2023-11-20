@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Colegio </title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h1>Mi colegio</h1>
+
+  <div class="accordion">
+    <div class="section" onclick="secciones('section1')">Información general</div>
+    <div class="content" id="section1">
+      <p>Nombre: IE. San Juan Bautista de La Salle</p>
+      <p>Dirección: Calle José María Argüedas S/N Umacollo, Arequipa, Peru</p>
+      <p>Número: 914 797 016</p>
+      <p>Correo: sanjuan@sjbdelasalle.edu.pe</p>
+      <p>PULSE PARA MOSTRAR EL LOGO </p>
+      <button onclick="mostrar()">MOSTRAR	</button>
+    </div>
+
+    <div class="section" onclick="secciones('section3')">Mi colegio</div>
+    <div class="content" id="section3">
+      <p>Es el colegio en el que cursé mi primaria y secundaria.</p>
+      <p>Terminé el colegio en el 2021 en tiempos de pandemia .</p>
+      <img src="https://bk.sjbdelasalle.edu.pe/sjb/assets/images/sanjuan.jpg" width="300" height="200">
+      <a href="https://bk.sjbdelasalle.edu.pe/sjb/index.html">Página de mi colegio</a>
+    </div>
+    <button onclick="refresh()">Actualizar</button>
+    <button onclick="regresar()">Regresar</button>
+  </div>
+
+
+
+
+  <script>
+    function secciones(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function refresh() {
+      location.reload();
+    }
+    function regresar() {
+       window.location.href = 'http://localhost/nueva3.html';
+    }
+
+    function mostrar() {
+    var imagen = document.createElement('img');
+    imagen.src = 'https://4.bp.blogspot.com/-CEPjJu4K-Bs/WNPw1MnxQYI/AAAAAAAABFs/dGEZJQWTpf8j8x_7GvMomaJUGDW_vWTdwCEw/w1200-h630-p-k-no-nu/1.png';
+    document.getElementById('section1').appendChild(imagen);
+}
+  </script>
+
+</body>
+
+</html>

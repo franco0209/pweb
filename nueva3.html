@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mi Pagina </title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <h1>Página Personal</h1>
+
+  <div class="accordion">
+    <div class="section" onclick="secciones('section1')">Datos Personales</div>
+    <div class="content" id="section1">
+      <p>Nombre: Franco Jesus Cahua Soto</p>
+      <p>Universidad: UNSA</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/LOGO_UNSA.png/1200px-LOGO_UNSA.png" width="300" height="200">
+      <a href="https://www.unsa.edu.pe/">Página de la Universidad Nacional de San Agustín</a>
+    </div>
+   <div class="section" onclick="secciones('section2')">Hobbies</div>
+    <div class="content" id="section2">
+      <div class="section" onclick="secciones('subsection1')">Jugar a videojuegos</div>
+      <div class="content" id="subsection1">
+        <h2>Jugar a videojuegos</h2>
+        <h3>EFOOTBALL</h3>
+        <img src="https://assetsio.reedpopcdn.com/efootball-2024.png?width=400&height=400&fit=bounds&quality=80&format=jpg&auto=webp" width="300" height="200">
+        <p>eFootball 2024 es un juego de fútbol que comenzó como Pro Evolution Soccer y es conocido en Japón como Winning Eleven. Es una serie de videojuegos desarrollada y distribuida por la empresa Konami, como sucesor de la serie PES.</p>
+        <img src="https://img.konami.com/kde_cms/na_publish/uploads/efootball-controlling-the-ball-touch-1024x576.jpg" width="400" height="225">
+        <button onclick="carta()">MOSTRAR UNA CARTA </button>
+        <a href="https://www.konami.com/efootball/es/">Página</a>
+
+        <h3>VALORANT</h3>
+        <img src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/6/5/ctsejxmdtw9inp8zqqqd/valorant" width="400" height="225">
+        <p>Valorant es un hero shooter en primera persona multijugador gratuito desarrollado y publicado por Riot Games.</p>
+        <button onclick="heroes()">MOSTRAR UNA PERSONAJE </button>
+        <a href="https://playvalorant.com/">Página</a>
+      </div>
+     <div class="section" onclick="secciones('subsection5')">Mostrar imagenes</div>
+      <div class="content" id="subsection5">
+        <h2>CARTAS</h2>
+
+      </div>
+
+      <div class="section" onclick="secciones('subsection2')">Jugar fútbol</div>
+      <div class="content" id="subsection2">
+        <p>Me gusta jugar fútbol con amigos en mis tiempos libres.</p>
+        <img src="https://s3.abcstatics.com/media/bienestar/2019/09/17/futbol-1-kU3C--1248x698@abc.jpg" alt="Jugando fútbol">
+      </div>
+
+      <div class="section" onclick="secciones('subsection3')">Programar</div>
+      <div class="content" id="subsection3">
+        <p>En la carrera lo hago constantemente y es algo que disfruto, suelo añadir mejoras y aprender más allá de la enseñanza.</p>
+        <img src="https://www.seas.es/blog/wp-content/uploads/2019/07/lenguaje_java_blogseas.png" alt="Programando">
+        <button onclick="programar()">PROGRAMAR </button>
+      </div>
+      </div>
+      <div class="section" onclick="secciones('section3')">Mi colegio</div>
+      <div class="content" id="section3">
+      <p>Nombre: IE. San Juan Bautista de La Salle</p>
+      <p>Es el colegio en el que curse mi primaria y secundaria.</p>
+      <img src="https://bk.sjbdelasalle.edu.pe/sjb/assets/images/sanjuan.jpg" width="300" height="200">
+      <a href="http://localhost/Pagina2.html">Página de mi colegio</a>
+    </div>
+
+    <button onclick="refresh()">Actualizar</button>
+  </div>
+
+  <script>
+    function secciones(sectionId) {
+      var section = document.getElementById(sectionId);
+      section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+    }
+    function carta() {
+      alert("Se puede mostrar la carta en el juego de los siguentes jugadores: \n1. Messi\n2. Neymar\n3. Ronaldo");
+      var userInput = prompt("Ingresa el número de un jugador de la lista:");
+      if(userInput==1){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://pbs.twimg.com/media/FUBgSNMWYAEmyoQ.jpg';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      if(userInput==2){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://i.redd.it/new-legendary-carda-for-neymar-and-messi-source-inside-v0-n3nh5qfvqj291.jpg?width=240&format=pjpg&auto=webp&s=75c6c68532028073ce374dec2a956793028823a2';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      if(userInput==3){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://i.postimg.cc/YS8v56GR/s.png';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      
+    }
+    function heroes() {
+      alert("Se puede mostrar uno de estos personajes de Valorant que suelo usar: \n1. Omen\n2. Phoenix\n3. Yoru");
+      var userInput = prompt("Ingresa el número de un jugador de la lista:");
+      if(userInput==1){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt4e5af408cc7a87b5/5eb7cdc17bedc8627eff8deb/V_AGENTS_587x900_Omen.png';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      if(userInput==2){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltf0200e1821b5b39f/5eb7cdc144bf8261a04d87f9/V_AGENTS_587x900_Phx.png';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      if(userInput==3){
+      var imagen = document.createElement('img');
+      imagen.src = 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltd4080f8efb365751/5ff5660bb47cdf7fc7d6c3dc/V_AGENTS_587x900_yoru.png';
+      document.getElementById('subsection5').appendChild(imagen);
+      }
+      
+    }
+    function programar() {
+      alert("Se puede mostrar una dinamica con estas ramas de la programacióm: \n1. Condicionales\n2. Bucles");
+      var userInput = prompt("Ingresa un número de la lista:");
+      if(userInput==1){
+      	alert("Los condicionales son estructuras que verifican una condicion booleana(verdadero/falso).\nSe le mostrará una sentencia booleana y de acuerdo a su respuesta se mostrará (o no) el mensaje.\n(5*8)+((2*4)+2)");
+      	var userInput2 = prompt("Ingrese su respuesta:");
+		if(userInput2==50){
+      		alert("RESPUESTA CORRECTA");
+      		}
+		else{
+		alert("RESPUESTA INCORRECTA");
+		}
+      	}
+      else if(userInput==2){
+      	var userInput3 = prompt("Los bucles son estructuras repetitivas que ejecutan un bloque de código un número de veces. Ingrese el texto para mostrarlo");
+        var msj="";
+      	var userInput4 = prompt("Ingrese el número de veces a mostrarlo");
+      	for (var i = 0; i < userInput4; i++) {
+      		msj=msj+userInput3+"\n";
+      	}
+        alert(msj);
+      }
+    }
+
+    function refresh() {
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>
